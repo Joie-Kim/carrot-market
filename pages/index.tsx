@@ -40,15 +40,17 @@ const Home = () => {
           Hello world!
         </p>
       </div>
-      <div className='rounded-3xl bg-white p-6 shadow-xl'>
-        <span className='text-3xl font-semibold'>Select Item</span>
+      <div className='rounded-3xl bg-white p-6 shadow-xl dark:bg-black'>
+        <span className='text-3xl font-semibold dark:text-white'>
+          Select Item
+        </span>
         <ul>
           {[1, 2, 3, 4, 5].map((v, i) => (
             <div
               key={i}
-              className='my-2 flex justify-between first:bg-blue-50 last:bg-teal-50'
+              className='my-2 flex justify-between first:bg-blue-50 last:bg-teal-50 dark:text-white dark:first:bg-blue-400 dark:last:bg-teal-400'
             >
-              <span className='text-gray-500'>Grey Chair</span>
+              <span className='text-gray-500 dark:text-white'>Grey Chair</span>
               <span className='font-semibold'>$19</span>
             </div>
           ))}
@@ -56,16 +58,19 @@ const Home = () => {
 
         <ul>
           {['a', 'b', 'c', ''].map((c, i) => (
-            <li className='border py-2 empty:bg-red-50' key={i}>
+            <li
+              className='border py-2 empty:bg-red-50 dark:text-white dark:empty:bg-red-400'
+              key={i}
+            >
               {c}
             </li>
           ))}
         </ul>
-        <div className='mt-2 flex justify-between border-t-2 border-dashed pt-2'>
+        <div className='mt-2 flex justify-between border-t-2 border-dashed pt-2 dark:text-white'>
           <span>Total</span>
           <span className='font-semibold'>$38</span>
         </div>
-        <button className='mx-auto mt-5 block w-3/4 rounded-xl bg-blue-500 p-3 text-center text-white hover:bg-teal-500'>
+        <button className='mx-auto mt-5 block w-3/4 rounded-xl bg-blue-500 p-3 text-center text-white hover:bg-teal-500 dark:border dark:bg-black dark:hover:bg-white dark:hover:text-black'>
           Checkout
         </button>
       </div>
