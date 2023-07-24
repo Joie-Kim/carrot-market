@@ -55,8 +55,8 @@ const ItemDetail = () => {
           {[1, 2, 3, 4, 5, 6].map((_, i) => (
             <div key={i}>
               <div className="mb-4 mt-6 h-56 w-full bg-slate-300" />
-              <h3>Galaxy S60</h3>
-              <p>$6</p>
+              <h3 className="-mb-1 text-gray-700">Galaxy S60</h3>
+              <p className="text-sm font-medium text-gray-900">$6</p>
             </div>
           ))}
         </div>
